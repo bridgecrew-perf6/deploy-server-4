@@ -6,13 +6,13 @@ import fs from "fs-extra";
 import path from 'path';
 import { cwd } from "process";
 
-//const configPath = path.join(cwd(), 'src', 'config', 'deploy-server.yml')
+const configPath = path.join(cwd(), 'src', 'config', 'deploy-server.yml')
 const { json } = bodyParser;
 const app = express();
-//const config = yaml.load(fs.readFileSync(configPath, "utf8"));
+const config = yaml.load(fs.readFileSync(configPath, "utf8"));
 
-//const { serverPort } = config;
-const serverPort = 8080;
+const { serverPort } = config;
+
 app.use(helmet());
 app.use(
   json({
