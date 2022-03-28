@@ -1,0 +1,33 @@
+{
+  "name": "deploy-server",
+  "version": "0.0.1",
+  "description": "This is for server deployment",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "release": "tar -czf releases/release.tgz src/ package.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ppulwey/deploy-server.git"
+  },
+  "keywords": [
+    "ubuntu",
+    "deployment",
+    "CI/CD"
+  ],
+  "author": "Patrick Pulwey",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ppulwey/deploy-server/issues"
+  },
+  "homepage": "https://github.com/ppulwey/deploy-server#readme",
+  "dependencies": {
+    "body-parser": "^1.19.2",
+    "express": "^4.17.3",
+    "fs-extra": "^10.0.1",
+    "helmet": "^5.0.2",
+    "js-yaml": "^4.1.0"
+  }
+}
