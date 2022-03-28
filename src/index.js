@@ -4,8 +4,9 @@ import helmet from "helmet";
 import yaml from "js-yaml";
 import fs from "fs-extra";
 import path from 'path';
+import { cwd } from "process";
 
-const configPath = path.join('config', 'deploy-server.yml')
+const configPath = path.join(cwd(), 'src', 'config', 'deploy-server.yml')
 const { json } = bodyParser;
 const app = express();
 const config = yaml.load(fs.readFileSync(configPath, "utf8"));
